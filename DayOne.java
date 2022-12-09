@@ -68,8 +68,10 @@ public class DayOne {
             if( !isNumeric(raw.get(i)) ){
 		        sums.add(partialSum);
 		        partialSum = 0;
+		        i++;
 		    }
-		    partialSum += Integer.parseInt( raw.get(i) );		   
+		    partialSum += Integer.parseInt( raw.get(i) );
+		    i++;		   
         }
         Collections.sort(sums);
         return sums.get(sums.size()-1)+sums.get(sums.size()-2)+sums.get(sums.size()-3);
